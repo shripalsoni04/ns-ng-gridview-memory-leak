@@ -1,0 +1,43 @@
+<ActionBar title="Title" icon="">
+  <NavigationButton 
+    text="Back" 
+    android.systemIcon="ic_menu_back"
+    (tap)="goBack()">
+</NavigationButton>
+</ActionBar>
+
+<!-- ============================Case 1: Only one Image View============================ -->
+<!-- Memory Leak -->
+<GridLayout>
+    <Image src="https://unsplash.it/400/200?image=1067"></Image>
+</GridLayout>
+
+<!--  No Memory Leak -->
+<!--<StackLayout>
+    <Image src="https://unsplash.it/400/200?image=1067"></Image>
+</StackLayout>-->
+
+<!-- ============================Case 2: With multiple views ============================ -->
+<!-- Memory Leak -->
+<!--<GridLayout rows="auto, auto, auto">
+    <StackLayout row="0">
+        <Label text="Label 1"></Label>
+    </StackLayout>
+    <Label row="1" text="Label 2"></Label>
+    <StackLayout row="2">
+        <Image src="https://unsplash.it/400/200?image=1067"></Image>
+    </StackLayout>
+</GridLayout>-->
+
+<!-- No Memory Leak -->
+<!--<StackLayout>
+    <GridLayout rows="auto, auto, auto">
+        <StackLayout row="0">
+            <Label text="Label 1"></Label>
+        </StackLayout>
+        <Label row="1" text="Label 2"></Label>
+        <StackLayout row="2">
+            <Image src="https://unsplash.it/400/200?image=1067"></Image>
+        </StackLayout>
+    </GridLayout>
+</StackLayout>-->
