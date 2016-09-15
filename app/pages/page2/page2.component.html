@@ -8,9 +8,9 @@
 
 <!-- ============================Case 1: Only one Image View============================ -->
 <!-- Memory Leak -->
-<GridLayout>
+<!--<GridLayout>
     <Image src="https://unsplash.it/400/200?image=1067"></Image>
-</GridLayout>
+</GridLayout>-->
 
 <!--  No Memory Leak -->
 <!--<StackLayout>
@@ -40,4 +40,21 @@
             <Image src="https://unsplash.it/400/200?image=1067"></Image>
         </StackLayout>
     </GridLayout>
+</StackLayout>-->
+
+<!-- ============================Case 3: Only Label View ============================ -->
+<!-- Memory Leak -->
+<GridLayout>
+    <Label 
+      textWrap="true" 
+      [text]="longText">
+    </Label>
+</GridLayout>
+
+<!-- No Memory Leak -->
+<!--<StackLayout>
+    <Label 
+      textWrap="true" 
+      [text]="longText">
+    </Label>
 </StackLayout>-->
