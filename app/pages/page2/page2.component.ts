@@ -16,7 +16,7 @@ export class Page2Component{
     }
 
     goBack(){
-        GC();
+        //GC();
         this.routerExtensions.backToPreviousPage();
     }
 }
